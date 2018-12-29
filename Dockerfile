@@ -3,7 +3,7 @@ MAINTAINER Gravebot
 
 # Setup system deps
 RUN apt-get update
-RUN apt-get -y install build-essential curl rsync tar python python-pip git libfontconfig1
+RUN apt-get -y install build-essential curl rsync tar python python-pip git libfontconfig1 ttf-wqy-zenhei
 
 # Setup Node
 ENV NODE_VERSION 4.4.2

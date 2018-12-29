@@ -98,7 +98,7 @@ request(download_options)
   .then(() => {
     console.log('Taring archive');
     process.chdir('./dockerized-phantomjs');
-    return execSync('tar -zcf ../dockerized-phantomjs.tar.gz ./lib ./lib64 ./usr/lib');
+    return execSync('tar -zcf ../dockerized-phantomjs.tar.gz ./lib ./lib64 ./usr/lib /etc/fonts /usr/share/fonts');
   })
   .then(() => {
     if (process.env.GITHUB_TOKEN) return releaseToGithub();
